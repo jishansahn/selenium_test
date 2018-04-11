@@ -10,6 +10,8 @@ import sys
 browser = webdriver.Chrome()
 browser.maximize_window()
 
+print sys.getdefaultencoding()
+
 def test_login():
     # print os.environ
     browser.get('https://www.zuihuibao.cn/brokera_channels/#/login?jup=jup&source=new')
