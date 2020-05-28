@@ -5,16 +5,18 @@ import selenium.webdriver.support.ui as ui
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
+
 import sys
+
 
 browser = webdriver.Chrome()
 browser.maximize_window()
 
-print sys.getdefaultencoding()
+print(sys.getdefaultencoding())
 
 def test_login():
     # print os.environ
-    browser.get('https://www.zuihuibao.cn/brokera_channels/#/login?jup=jup&source=new')
+    browser.get('https://www.zhbbroker.cn/zhb-m/#/')
 
     time.sleep(2)
     # wait=ui.WebDriverWait(browser,10)
@@ -57,7 +59,7 @@ def test_login():
     # login_btn.click()
     time.sleep(3)
 
-    print browser.title
+    print(browser.title)
     # browser.quit()
 
 def test_main_page():
@@ -72,7 +74,7 @@ def test_main_page():
     time.sleep(1)
     e_city_list=browser.find_elements_by_class_name('wheel-scroll-hook')[1].find_elements_by_tag_name('li')
     for city in e_city_list:
-        print city.get_attribute("style")
+        print(city.get_attribute("style"))
 
     # e_city = browser.find_element_by_xpath("//ul[@class='wheel-scroll wheel-scroll-hook']/li[text()='南京']")
     # e_city.click()
@@ -93,6 +95,6 @@ def test_banner():
     pass
 
 
-if __name__=='__main__':
-    test_login()
-    test_main_page()
+# if __name__=='__main__':
+#     test_login()
+#     test_main_page()
