@@ -22,7 +22,7 @@ MarkupSafe==1.0
 more-itertools==4.2.0
 namedlist==1.7
 packaging==19.2
-paramiko==2.4.1
+paramiko==2.10.1
 pathlib2==2.3.5
 Pillow==5.2.0
 pluggy==0.13.1
